@@ -110,14 +110,6 @@ export default {
 </script>
 
 <style scoped>
-* {
-  /* 重置默认样式 */
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  user-select: none;
-}
 .my-wrapper {
   position: relative;
   height: 200px;
