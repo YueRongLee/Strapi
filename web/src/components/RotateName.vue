@@ -266,7 +266,9 @@ export default {
   transform-origin: center;
 }
 .my-name-result {
-  margin: 20px 10px;
+  width: 200px;
+  padding: 20px;
+  margin: 20px 60px;
 }
 
 @keyframes twinkling {

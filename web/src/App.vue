@@ -52,6 +52,10 @@ export default {
         },
         {
           path: "/about",
+          name: "介紹",
+        },
+        {
+          path: "/draw-lots",
           name: "抽抽樂",
         },
       ],
@@ -59,7 +63,7 @@ export default {
   },
   methods: {
     goto(path) {
-      path === this.$route.path ? '':this.$router.push(path)
+      path === this.$route.path ? "" : this.$router.push(path)
     },
   },
 }
@@ -124,12 +128,13 @@ body {
   flex: 1;
   display: flex;
   background: linear-gradient(rgb(204, 255, 220), rgb(174, 227, 255));
+  overflow: hidden;
 }
 #app-content-sidebar {
   width: 15%;
   background: linear-gradient(rgb(255, 232, 206), rgb(238, 255, 181));
   box-shadow: 3px 3px 8px 0 #959595;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   display: flex;
   flex-direction: column;
 }
@@ -142,7 +147,7 @@ body {
   font-weight: bold;
   font-size: 20px;
   background: rgb(231, 231, 231);
-  border-radius: 20px 20px 0 0;
+  /* border-radius: 20px 20px 0 0; */
   box-shadow: 3px 3px 8px 0 #959595;
 }
 .app-content-sidebar-list {
@@ -158,6 +163,7 @@ body {
   flex: 1;
   padding: 20px;
   border-radius: 20px;
+  overflow: scroll;
 }
 .app-content-li {
   margin: 0 10px;
@@ -173,6 +179,8 @@ body {
 }
 .app-content-li:hover {
   background: rgb(193, 215, 255);
-  box-shadow: 3px 3px 8px 2px #8fa7a2;
+  box-shadow: 2px 2px 10px 2px #8fa7a2;
+  transform: translateY(2px);
+  transition: all 0.1s ease-out;
 }
 </style>
